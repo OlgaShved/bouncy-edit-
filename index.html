@@ -9,6 +9,10 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="icon" href="favicon.png">
+
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/> -->
+
 	    <link type="text/css" rel="stylesheet" href="css/main.css">
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -22,31 +26,33 @@
 			<header class="header">
 				<div class="container">
 					<div class="row">
-						<div class="col-2">
-							<div class="block-logo">
-								<a class="logo" href="/">
-									<img src="img/Bouncy.png" alt="logo">
-								</a>
-							</div>
-						</div>
+					  	<div class="col-2">
+					  		<a class="logo" href="/">
+					  			<img src="img/Bouncy.png" alt="logo">
+					  		</a>
+					  	</div>
 
-						<div class="col-10">
-							<nav class="menu">
-								<ul class="menu__list">
-									<li class="menu__item"><a class="menu__link" href="#hello">Hello</a></li>
-									<li class="menu__item"><a class="menu__link" href="#portfolio">Portfolio</a></li>
-									<li class="menu__item"><a class="menu__link" href="#team">Team</a></li>
-									<li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div> <!-- /.row -->
+					  	<button id="show-menu" class="my-hamburger">
+							<span class="icon-angle-down"></span>
+						</button>
+
+					  	<div class="col-10">
+					  		<nav id="main-menu" class="menu animation">
+					  			<ul class="menu__list">
+					  				<li class="menu__item"><a class="menu__link" href="#hello">Hello</a></li>
+					  				<li class="menu__item"><a class="menu__link" href="#portfolio">Portfolio</a></li>
+					  				<li class="menu__item"><a class="menu__link" href="#team">Team</a></li>
+					  				<li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+					  			</ul>
+					  		</nav>
+					  	</div>
+					  </div> <!-- /.row -->
 				</div> <!-- /.container -->
-			</header>
+			</header> <!-- добавить кнопку меню -->
 
 			<div class="container">
 				<div class="first-page-content">
-					<h1 class="first-page-content__title">We Are Code Cafe</h1>
+					<h1 class="first-page-content__title">We Are Code Cafe</h1> <!-- добавить анимацию ка у Марины? -->
 					<p class="first-page-content__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
 				</div>
 
@@ -63,9 +69,9 @@
 
 			<section id="portfolio" class="slide-portfolio">
 				<div class="container">
-					<div class="contact-us__text">
-						<h3>THE PORTFOLIO</h3>
-						<p class="all-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+					<div class="section__text">
+						<h3 class="text--title">THE PORTFOLIO</h3>
+						<p class="text--describe">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
 					</div>
 
 					<div class="select-btns">
@@ -84,72 +90,132 @@
 							<div class="grid-item group-1">
 								<div class="img-wrap use-display">
 									<img src="img/01.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div><!-- /.img-wrap -->
 							</div>
 
 							<div class="grid-item group-2">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/02.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-3">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/03.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-4">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/04.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-1">
 								<div class="img-wrap use-display">
 									<img src="img/05.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div><!-- /.img-wrap -->
 							</div>
 
 							<div class="grid-item group-2">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/06.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-3">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/07.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-4">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/08.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-1">
 								<div class="img-wrap use-display">
 									<img src="img/09.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div><!-- /.img-wrap -->
 							</div>
 
 							<div class="grid-item group-2">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/10.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item group-3">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/11.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
 							<div class="grid-item grid-item--width2 group-4">
-								<div class="img-wrap use-opacity">
+								<div class="img-wrap use-display">
 									<img src="img/12.png" alt="img">
+									<div class="hover-img">
+										<div class="hover-text">
+											<a class="menu__link" href="#">Read more...</a>
+										</div>
+									</div><!-- /.hover-img -->
 								</div>
 							</div>
 
@@ -159,18 +225,69 @@
 
 			<section id="team" class="team">
 				<div class="container">
-					<div class="contact-us__text">
-						<h3>THE TEAM</h3>
-						<p class="all-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+					<div class="section__text">
+						<h3 class="text--title">THE TEAM</h3>
+						<p class="text--describe">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
 					</div>
+
+					<!-- slider -->
+
+					<div class="slider-team">
+						<div>
+							<div class="my-slide">
+								<div class="my-slide__wrapper-img">
+									<img class="my-slide__img" src="img/Slider.png" alt="slider-team-img">
+								</div>
+
+								<div class="my-slide__content">
+									<h3 class="my-slide__title">Abdullah Noman</h3>
+									<h4 class="my-slide__subtitle">Creative Director, Code Cafe</h4>
+									<p class="my-slide__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="my-slide">
+								<div class="my-slide__wrapper-img">
+									<img class="my-slide__img" src="img/Slider.png" alt="slider-team-img">
+								</div>
+
+								<div class="my-slide__content">
+									<h3 class="my-slide__title">Abdullah Noman</h3>
+									<h4 class="my-slide__subtitle">Creative Director, Code Cafe</h4>
+									<p class="my-slide__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="my-slide">
+								<div class="my-slide__wrapper-img">
+									<img class="my-slide__img" src="img/Slider.png" alt="slider-team-img">
+								</div>
+
+								<div class="my-slide__content">
+									<h3 class="my-slide__title">Abdullah Noman</h3>
+									<h4 class="my-slide__subtitle">Creative Director, Code Cafe</h4>
+									<p class="my-slide__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+								</div>
+							</div>
+						</div>
+					</div><!-- /.slider -->
+				</div><!-- /.container  -->
+
+				<div class="full-container">
+					<h2 class="team__title">Already Loved Us? Let’s talk!</h2>
+					<a href="#">Contact Us</a>
 				</div>
 			</section> <!-- s2 -->
 
 			<section id="contact" class="contact-us">
 				<div class="container">
-					<div class="contact-us__text">
-						<h3>Contact Us</h3>
-						<p class="all-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+					<div class="section__text">
+						<h3 class="text--title">Contact Us</h3>
+						<p class="text--describe">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
 					</div>
 				</div>
 
@@ -203,8 +320,8 @@
 					<a class="social-icons__gamb-btn gamb-btn--ins" href="https://www.instagram.com">
 						<i class="icon-instagram"></i>
 					</a>
-					<a class="social-icons__gamb-btn gamb-btn--v" href="https://www.instagram.com">
-						<i class="icon-instagram"></i>
+					<a class="social-icons__gamb-btn gamb-btn--v" href="https://vimeo.com/">
+						<i class="icon-vimeo"></i>
 					</a>
 				</div>
 

@@ -1,13 +1,33 @@
-function clickMenuAndBtn(event) {
-	event.preventDefault();
-	var link = $(this).attr('href');
-	var distance = $(link).offset().top;
+var $topMenu = $('#main-menu'),
+  $showMenuBtn = $('#show-menu');
 
-	$('html, body').animate({
-		scrollTop: distance
-	}, 500);
-}
+$showMenuBtn.on('click', function(){
+  if ( $topMenu.hasClass('open')){
+    $topMenu.removeClass('open');
+  }
+  else{
+    $topMenu.addClass('open');
+  }
+});
 
+$(window).resize(function(){
+  if ($(window).width() > 885){
+    $topMenu.removeClass('animation')
+            .removeClass('open');
+
+
+  }else{
+    $topMenu.addClass('animation');
+  }
+});
+
+$topMenu.on('click', 'a', function(){
+  $topMenu.removeClass('open');
+});
+
+
+
+/*инициализация карты*/
 function initMap() {
   var map;
 
@@ -71,67 +91,77 @@ function initMap() {
 
 $(document).ready(function() {
 
+  initMap(); //вызов функции карты
+
+  /*плавная прокрутка по клику на меню и на кнопку внизу*/
+  function clickMenuAndBtn(event) {
+    event.preventDefault();
+    var link = $(this).attr('href');
+    var distance = $(link).offset().top;
+
+    $('html, body').animate({
+      scrollTop: distance
+    }, 500);
+  }
+
 	$('.menu__list').on('click', '.menu__link', clickMenuAndBtn);
 	$('#click-down').on('click', clickMenuAndBtn);
-	initMap();
+  /*end*/
+
+  /*select - masonry*/
+
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+      masonry: {
+      // use outer width of grid-sizer for columnWidth
+      columnWidth: '.grid-item-size',
+  	  horizontalOrder: true
+      // gutter: 5
+    }
+  })
+
+  // filter items on button click
+  $('.select-btns').on( 'click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
 
 
-/* полупрозрачность фиксированного меню*/
+  /*slick*/
 
-  $(window).scroll(function(){
+  $('.slider-team').slick({
+    arrows: false,
+    dots: true
+  });
+
+  $('.slider-testimonials').slick({
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true
+  });
+
+
+}); // конец doc.ready
+
+/* событие скролл */
+
+
+
+$(window).scroll(function(){
+
+
+  /* полупрозрачность фиксированного меню*/
+
   var dist = $('#portfolio').offset().top;
   //console.log('window ' + $(window).scrollTop() + 'dist ' + dist);
   if ($(window).scrollTop() >= dist){
-    $('header').css('background', 'rgba(0, 0, 0, 0.3)');
+    $('.header').css('background', 'rgba(0, 0, 0, 0.3)');
   } else {
-    $('header').css('background', 'transparent');
+    $('.header').css('background', 'transparent');
   }
-});
-
-/*select*/
-
-
-var $grid = $('.grid').isotope({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-    masonry: {
-    // use outer width of grid-sizer for columnWidth
-    columnWidth: '.grid-item-size',
-	horizontalOrder: true
-    // gutter: 10
-  }
-})
-
-// filter items on button click
-$('.select-btns').on( 'click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
-
-/*slick*/
-
-$('.ba-slider').slick({
-    /*centerMode: true,
-    centerPadding: '60px', по центру. но тогда прокручивает по одному слайду*/
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    speed: 100,
-      infinite:true,
-    slide: ".slide-show",
-    prevArrow: ".ba-slider__prev",
-    nextArrow: ".ba-slider__next",
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-          slidesToScroll: 1,
-          speed: 100,
-            infinite:true
-          }
-        }
-      ] // на экране шириной менее 1024
-  });
 
 });
 

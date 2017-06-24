@@ -1,16 +1,26 @@
+/* fonts */
 $main-font: 'Open Sans', sans-serif;
 $next-font: 'Source Sans Pro', sans-serif;
+
+/* colors */
 $header-color: #ffffff; // цвет шифта хедера и белый ФОН
 $main-color: #81868e; // цвет основного текста
 $title-color: #333b46; // заголовки
 $next-color: #464646; // цвет вкладок сортировки; имя чувака в слайдере мен; подпись в слайдере фейс
-
-$mainfontSize: 14px; // font-size
-$nextfontSize: 16px;
-$font-height: 1.8; // line-height
-$font-weight: 400;
 $color-bg: #f3f3f3; // фон серый
 $color-next: #19bd9a; // цвет кнопки и ховера (полосочки)
+
+/* size */
+$main-font-size: 14px; // font-size
+$next-font-size: 16px;
+$title-font-size: 20px;
+$header-font-size:35px;
+
+
+$font-height: 1.8; // line-height
+
+$font-weight: 400;
+$title-font-weight:300;
 
 
 /** Grid variables **/
