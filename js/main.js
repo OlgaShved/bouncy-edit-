@@ -52,8 +52,8 @@ function initMap() {
   });
 
   var image = {
-    url: 'favicon.png', // if image is bigger then next
-    scaledSize : new google.maps.Size(25, 25)
+    url: 'img/favicon-shadow.png', // if image is bigger then next
+    scaledSize : new google.maps.Size(60, 60)
   };
 
   var marker_che = new google.maps.Marker({

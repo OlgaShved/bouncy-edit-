@@ -1132,8 +1132,8 @@ footer {
 
 /* == Media  == */
 @media (max-width: 768px) {
-  .header {
-    padding-top: 10px;
+  .header, .team, .contact-us {
+    padding-top: 20px;
   }
 
   .first-page {
@@ -1141,29 +1141,25 @@ footer {
   }
 
   .first-page-content {
-    padding-top: 50px;
+    padding-top: 60px;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 90%;
   }
-
   .first-page-content__title {
     font-size: 20px;
   }
-
   .first-page-content__text {
     padding: 0 0 50px;
+    font-size: 14px;
   }
 
   .down {
     display: none;
   }
 
-  .team {
-    padding-top: 20px;
-  }
-
-  .contact-us {
-    padding-top: 20px;
+  .section__text .text--title {
+    margin: 0 0 15px;
+    line-height: 1;
   }
 
   .footer__text {
@@ -1183,21 +1179,21 @@ footer {
     font-size: 20px;
   }
 
-  .slide-portfolio, .testimonials,
-  .footer {
+  .slide-portfolio, .testimonials {
     padding: 20px 0 20px;
   }
 
-  .slide-team, .slide-contact {
-    padding-top: 20px;
+  .slick-dots {
+    padding-top: 0px;
   }
 
-  .first-slide__next-link {
-    display: none;
+  footer, .team .slider-team {
+    padding-bottom: 20px;
   }
 
-  .first-slide-content {
-    width: 90%;
+  .slider-testimonials .slick-dots {
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 
   .section__text {
@@ -1205,6 +1201,10 @@ footer {
     margin-bottom: 20px;
   }
   .section__text.text--describe {
+    margin-bottom: 20px;
+  }
+
+  .select-btns {
     margin-bottom: 20px;
   }
 
@@ -1216,17 +1216,12 @@ footer {
     text-align: center;
   }
 
-  .slick-dots {
-    padding-top: 10px;
+  .my-slide {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-
-  .slider-testimonials .slick-dots {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .slide-team .slider-team {
-    padding-bottom: 20px;
+  .my-slide__content {
+    padding-right: 0;
   }
 
   .tm-slide {
@@ -1235,13 +1230,15 @@ footer {
     padding-top: 10px;
   }
   .tm-slide__content {
-    padding-left: 0;
+    padding: 0 10px;
+    font-size: 14px;
   }
 
   #map {
     height: 300px;
   }
 
+  /*Responsive menu*/
   #show-menu {
     position: relative;
     z-index: 1;
@@ -1261,8 +1258,8 @@ footer {
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
     display: block;
-    width: 30%;
-    top: 40px;
+    width: 60%;
+    top: 50px;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
@@ -1276,7 +1273,7 @@ footer {
   }
   .menu__item {
     display: block;
-    padding: 7px;
+    padding: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
   }
   .menu__link {

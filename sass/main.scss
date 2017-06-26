@@ -599,8 +599,8 @@ footer {
 /* == Media  == */
 
 @media (max-width: 768px){
-	.header {
-    	padding-top: 10px;
+	.header, .team, .contact-us {
+	    padding-top: 20px;
 	}
 
 	.first-page {
@@ -608,30 +608,29 @@ footer {
 	}
 
 	.first-page-content {
-	    padding-top: 50px;
+	    padding-top: 60px;
 	    margin: 0 auto;
-	    max-width: 80%;
+	    max-width: 90%;
+
+	    &__title {
+	    	font-size: $title-font-size;
+	    }
+
+		&__text {
+	    	padding: 0 0 50px;
+	    	font-size: $main-font-size;
+	    }
 	}
-
-	.first-page-content__title {
-    	font-size: $title-font-size;
-    }
-
-    .first-page-content__text {
-    	padding: 0 0 50px;
-    }
 
     .down {
 	    display: none;
 	}
 
-	.team {
-	    padding-top: 20px;
-	}
 
-	.contact-us {
-	    padding-top: 20px;
-	}
+	.section__text .text--title {
+	    margin: 0 0 15px;
+	    line-height: 1;
+	    }
 
 	.footer__text {
 	    max-width: 80%;
@@ -650,25 +649,21 @@ footer {
     	font-size: $title-font-size;
 	}
 
-
-  .slide-portfolio, .testimonials,
-  .footer {
-    padding: 20px 0 20px;
+	.slide-portfolio, .testimonials {
+	    padding: 20px 0 20px;
 	}
 
-	.slide-team, .slide-contact {
-		padding-top: 20px;
+	.slick-dots {
+	    padding-top: 0px;
 	}
 
-	.first-slide {
-
-		&__next-link{
-			display: none;
-		}
+	footer, .team .slider-team {
+	    padding-bottom: 20px;
 	}
 
-	.first-slide-content {
-		width: 90%;
+	.slider-testimonials .slick-dots {
+		padding-top: 0;
+		padding-bottom: 30px;
 	}
 
 	.section__text{
@@ -678,6 +673,10 @@ footer {
 		&.text--describe {
 			margin-bottom: 20px;
 		}
+	}
+
+	.select-btns {
+	    margin-bottom: 20px;
 	}
 
 	.my-slide, .tm-slide {
@@ -690,24 +689,16 @@ footer {
 	    	width: 100%;
 	    	text-align: center;
 	    }
-
 	}
 
-	.slick-dots {
-	    padding-top: 10px;
-	  }
+	.my-slide {
+	    padding-left: 10px;
+	    padding-right: 10px;
 
-	  .slider-testimonials .slick-dots {
-	    padding-top: 15px;
-	    padding-bottom: 15px;
-	}
-
-	.slide-team {
-
-	  	.slider-team {
-	      padding-bottom: 20px;
+	    &__content {
+	    	padding-right: 0;
 	    }
-	}
+    }
 
 	.tm-slide {
 	    padding-left: 0;
@@ -715,7 +706,8 @@ footer {
 	    padding-top: 10px;
 
 	    &__content {
-	    	padding-left: 0;
+	    	padding: 0 10px;
+	    	font-size: $main-font-size;
 	    }
 	}
 
@@ -724,8 +716,7 @@ footer {
 	}
 
 
-
-
+/*Responsive menu*/
 	#show-menu{
 		position: relative;
 		z-index: 1;
@@ -748,8 +739,8 @@ footer {
 	    transform-origin: 0 0;
 
 		display: block;
-		width: 30%;
-		top: 40px;
+		width: 60%;
+		top: 50px;
 		right: 0;
 		background: rgba(0, 0, 0, 0.8);
 		text-align: center;
@@ -765,7 +756,7 @@ footer {
 
 		&__item {
 			display: block;
-			padding: 7px;
+			padding: 10px;
 			border-top: 1px solid rgba(255,255,255,0.6);
 		}
 
